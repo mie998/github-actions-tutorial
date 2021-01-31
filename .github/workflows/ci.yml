@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2.0.0
+      - name: Setting valiable
+        run: echo "action_state=yellow" >> $GITHUB_ENV
       - name: Set Node.js ${{ matrix.node }}
         uses: actions/setup-node@v1.3.0
         with:
