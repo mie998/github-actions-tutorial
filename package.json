@@ -1,0 +1,16 @@
+{
+  "name": "fizz-buzz",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --fix",
+    "test": "mocha"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@cybozu/eslint-config": "^11.0.3",
+    "eslint": "^7.19.0",
+    "mocha": "^8.2.1",
+    "prettier": "^2.2.1"
+  }
+}
