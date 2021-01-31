@@ -1,9 +1,0 @@
-name: Hello, world!
-on: push
-
-jobs:
-  build:
-    name: Greetings
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Hello, World!"
