@@ -10,10 +10,11 @@ jobs:
         node: [10, 12]
     runs-on: ${{ matrix.os }}
     steps:
+      - env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+        run: echo ${ACTIONS_ALLOW_UNSECURE_COMMANDS}
       - name: Checkout
         uses: actions/checkout@v2.0.0
-      - name: Setting valiable
-        run: echo "true" >> $ACTIONS_ALLOW_UNSECURE_COMMANDS
       - name: Set Node.js ${{ matrix.node }}
         uses: actions/setup-node@v1.3.0
         with:
@@ -42,6 +43,9 @@ jobs:
     name: Lint
     runs-on: ubuntu-latest
     steps:
+      - env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+        run: echo ${ACTIONS_ALLOW_UNSECURE_COMMANDS}
       - name: Checkout
         uses: actions/checkout@v2.0.0
       - name: Set Node.js 12.x
