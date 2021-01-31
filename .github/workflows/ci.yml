@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.0.0
       - name: Setting valiable
-        run: echo "action_state=yellow" >> $GITHUB_ENV
+        run: echo "true" >> $ACTIONS_ALLOW_UNSECURE_COMMANDS
       - name: Set Node.js ${{ matrix.node }}
         uses: actions/setup-node@v1.3.0
         with:
