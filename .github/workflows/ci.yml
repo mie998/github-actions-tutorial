@@ -9,6 +9,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.0.0
       - name: Set Node.js 12.x
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
         uses: actions/setup-node@v1.3.0
         with:
           node-version: 12.x
@@ -23,6 +25,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.0.0
       - name: Set Node.js 12.x
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
         uses: actions/setup-node@v1.3.0
         with:
           node-version: 12.x
